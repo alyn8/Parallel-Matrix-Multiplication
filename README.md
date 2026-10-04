@@ -59,4 +59,17 @@ cd Parallel-Matrix-Multiplication
    ```bash
    g++ -O2 parallel_computing.cpp -o parallel_computing -lpthread
    ```
-3. Run 
+3. Run the executable:
+    ```bash
+   ./parallel_computing
+   ```
+---
+💻 Technical Details
+Language: C++
+
+Concurrency API: POSIX Threads (<pthread.h>)
+
+Parallelization Strategy: Each worker thread is assigned a specific range of rows from Matrix A to compute corresponding elements in Matrix C, avoiding race conditions and eliminating the need for mutex locks during write operations.
+---
+📜 License
+This project is open-source and available under the MIT License.
